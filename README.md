@@ -15,3 +15,10 @@ Python Langchain Demo Project
 - Install ollama related packges: `pipenv install langchain-ollama`
 - Install LLM model and run to chat with: `ollama run llama3`
 - Install `mistral` LLM from ollama: `ollama pull mistral`
+- Install `black` for formatting: `pipenv install black`
+    - Format documents in folder: `black .`
+
+## Develop real world Generative AI application
+
+- Register on `https://app.scrapin.io`
+- 
