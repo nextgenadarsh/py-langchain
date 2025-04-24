@@ -26,6 +26,8 @@ if __name__ == "__main__":
     # llm = ChatOllama(temperature=0, model="llama3")
     llm = ChatOllama(temperature=0, model="mistral")
     chain = summary_prompt_template | llm | StrOutputParser()
-    linkedin_data = scrape_linkedin_profile("http://linkedin.com/in/nextgenadarsh/", True)
+    linkedin_data = scrape_linkedin_profile(
+        "http://linkedin.com/in/nextgenadarsh/", True
+    )
     res = chain.invoke(input={"information": linkedin_data})
     print(res)

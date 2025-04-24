@@ -1,5 +1,5 @@
 """
-    Run using `inspect eval ./src/inspect_evaluations/hellaswag.py --limit 50  --model google/gemini-2.0-flash`
+    Run using `inspect eval ./src/inspect_ai/evaluations/hellaswag.py --limit 50  --model google/gemini-2.0-flash`
 """
 
 from inspect_ai import Task, task
@@ -11,33 +11,27 @@ SYSTEM_MESSAGE = """
 Choose the most plausible continuation for the story.
 """
 
+
 def record_to_sample(record):
     return Sample(
         input=record["ctx"],
         target=chr(ord("A") + int(record["label"])),
         choices=record["endings"],
-        metadata=dict(
-            source_id=record["source_id"]
-        )
+        metadata=dict(source_id=record["source_id"]),
     )
+
 
 @task
 def hellaswag():
-   
+
     # dataset
     dataset = hf_dataset(
-        path="hellaswag",
-        split="validation",
-        sample_fields=record_to_sample,
-        trust=True
+        path="hellaswag", split="validation", sample_fields=record_to_sample, trust=True
     )
 
     # define task
     return Task(
         dataset=dataset,
-        solver=[
-          system_message(SYSTEM_MESSAGE),
-          multiple_choice()
-        ],
+        solver=[system_message(SYSTEM_MESSAGE), multiple_choice()],
         scorer=choice(),
     )

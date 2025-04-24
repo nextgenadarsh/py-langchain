@@ -23,4 +23,5 @@ def scrape_linkedin_profile(profile_url: str, mock: bool = False):
     }
     return data
 
+
 # print(scrape_linkedin_profile("http://linkedin.com/in/nextgenadarsh/", True))

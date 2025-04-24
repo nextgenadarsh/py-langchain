@@ -3,6 +3,7 @@ from inspect_ai.dataset import Sample
 from inspect_ai.scorer import exact
 from inspect_ai.solver import generate
 
+
 @task
 def hello_world():
     return Task(
@@ -14,7 +15,7 @@ def hello_world():
             Sample(
                 input="Greet in morning",
                 target="Good morning",
-            )
+            ),
         ],
         solver=[generate()],
         scorer=exact(),
