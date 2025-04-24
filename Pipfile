@@ -10,8 +10,11 @@ langchain-community = "*"
 langchainhub = "*"
 langchain-ollama = "*"
 black = "*"
+inspect-ai = "*"
+google-genai = "*"
+datasets = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.12"
+python_version = "3.12.10"

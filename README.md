@@ -22,3 +22,11 @@ Python Langchain Demo Project
 
 - Register on `https://app.scrapin.io`
 - 
+
+## Inspect AI
+
+- Install inspect ai: `pip install inspect-ai`
+- Install google gemini: `pip install google-genai`
+- Configure `GOOGLE_API_KEY` to use Gemini LLM
+- Run task `inspect eval theory.py --model google/gemini-2.0-flash`
+- Inspect the task logs: `inspect view`
