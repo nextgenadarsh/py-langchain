@@ -30,3 +30,5 @@ Python Langchain Demo Project
 - Configure `GOOGLE_API_KEY` to use Gemini LLM
 - Run task `inspect eval theory.py --model google/gemini-2.0-flash`
 - Inspect the task logs: `inspect view`
+
+- Add Langsmith for tracing

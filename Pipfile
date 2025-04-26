@@ -13,6 +13,7 @@ black = "*"
 inspect-ai = "*"
 google-genai = "*"
 datasets = "*"
+flask = "*"
 
 [dev-packages]
 
